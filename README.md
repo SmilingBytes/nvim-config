@@ -17,17 +17,17 @@ mv ~/.config/nvim ~/.config/nvim.backup
 # Install
 ## Linux / macos (UNIX)
 
-1. Uninstall previous configurations:
+1. Uninstall previous configurations
 ```sh
 rm -rf ~/.config/nvim
 rm -rf ~/.local/share/nvim
 rm -rf ~/.cache/nvim
 ```
-2. Setup NvChad:
+2. Setup [NvChad](https://nvchad.github.io)
 ```sh
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 ```
-3. Setup Custom Config:
+3. Setup Custom Config
 ```sh
 git clone https://github.com/ismail-h-rana/nvim-config.git ~/.config/nvim/lua/custom --depth 1
 cd ~/.config/nvim/lua/custom
@@ -101,20 +101,56 @@ nvim ~/.config/nvim/lua/custom
 **File Structure:**
 ```sh
 .
-├── autocmds.lua
-├── chadrc.lua
+├── examples
+│   ├── chadrc.lua
+│   └── init.lua
 ├── init.lua
-├── init.vim
-├── mappings.lua
-├── options.lua
-├── override.lua
-├── plugins
-│   ├── hop.lua
-│   ├── init.lua
-│   ├── lspconfig.lua
-│   ├── null-ls.lua
-│   └── whichkey.lua
-└── README.md
+├── LICENSE
+├── lua
+│   ├── core
+│   │   ├── default_config.lua
+│   │   ├── init.lua
+│   │   ├── mappings.lua
+│   │   ├── options.lua
+│   │   ├── packer.lua
+│   │   └── utils.lua
+│   ├── custom
+│   │   ├── autocmds.lua
+│   │   ├── chadrc.lua
+│   │   ├── init.lua
+│   │   ├── init.vim
+│   │   ├── LICENSE
+│   │   ├── mappings.lua
+│   │   ├── options.lua
+│   │   ├── override.lua
+│   │   ├── plugins
+│   │   │   ├── hop.lua
+│   │   │   ├── init.lua
+│   │   │   ├── lspconfig.lua
+│   │   │   ├── null-ls.lua
+│   │   │   └── whichkey.lua
+│   │   └── README.md
+│   ├── plugins
+│   │   ├── configs
+│   │   │   ├── alpha.lua
+│   │   │   ├── bufferline.lua
+│   │   │   ├── cmp.lua
+│   │   │   ├── gps.lua
+│   │   │   ├── icons.lua
+│   │   │   ├── lsp_installer.lua
+│   │   │   ├── lspconfig.lua
+│   │   │   ├── lspkind_icons.lua
+│   │   │   ├── nvimtree.lua
+│   │   │   ├── nvterm.lua
+│   │   │   ├── others.lua
+│   │   │   ├── telescope.lua
+│   │   │   ├── treesitter.lua
+│   │   │   └── whichkey.lua
+│   │   └── init.lua
+│   └── ui
+│       └── statusline.lua
+└── plugin
+    └── packer_compiled.lua
 ```
 
 ## Themes
