@@ -35,24 +35,6 @@ nvim +PackerSync
 ```
 
 
-# Update
-
-**Update All (NvChad + Custom configs + Plugins):**
-```sh
-cd ~/.config/nvim
-git pull
-cd ~/.config/nvim/lua/custom
-git pull
-nvim +PackerSync
-```
-
-**Update Only Plugins:**
-```sh
-<leader> + pu
-```
-**Note:** by default `<leader>` is the `<space>` key
-
-
 # Post Install
 
 **If you're new to NeoVim/Vim**
@@ -149,8 +131,26 @@ nvim ~/.config/nvim/lua/custom
     ```
     :Telescope keymaps
     ```
-   
-    
+
+
+# Update
+
+**Update All (NvChad + Custom configs + Plugins):**
+```sh
+cd ~/.config/nvim
+git pull
+cd ~/.config/nvim/lua/custom
+git pull
+nvim +PackerSync
+```
+
+**Update Only Plugins:**
+```sh
+<leader> + pu
+```
+**Note:** by default `<leader>` is the `<space>` key
+
+
 # Uninstall
 
 Uninstalling is as simple as removing the nvim configuration directories.
