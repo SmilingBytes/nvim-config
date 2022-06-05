@@ -28,7 +28,7 @@ rm -rf ~/.cache/nvim
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 ```
 3. Setup Custom Config:
-```
+```sh
 git clone https://github.com/ismail-h-rana/nvim-config.git ~/.config/nvim/lua/custom --depth 1
 cd ~/.config/nvim/lua/custom
 nvim +PackerSync
@@ -37,7 +37,7 @@ nvim +PackerSync
 
 # Update
 
-**To update all:**
+**Update All (NvChad + Custom configs + Plugins):**
 ```sh
 cd ~/.config/nvim
 git pull
@@ -46,7 +46,7 @@ git pull
 nvim +PackerSync
 ```
 
-**To update only Plugins:**
+**Update Only Plugins:**
 ```sh
 <leader> + pu
 ```
@@ -57,7 +57,7 @@ nvim +PackerSync
 
 **If you're new to NeoVim/Vim**
 
-We strongly encourage you to learn how to use NeoVim/Vim, as it's more than a normal text editor.
+I strongly encourage you to learn how to use NeoVim/Vim, as it's more than a normal text editor.
 
 These are highly recommend and a must do for any new Vimmer.
 
@@ -138,7 +138,7 @@ nvim ~/.config/nvim/lua/custom
 ## Themes
 
   - To change default theme: 
-    ```
+    ```sh
     <leader> + th
     ```
     `<leader>` is `<space>` in our config
