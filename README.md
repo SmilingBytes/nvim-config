@@ -114,6 +114,8 @@ Note: I recommend installing `lua` for autocomplete in custom configuration.
 cd ~/.config/nvim/lua/custom
 nvim ~/.config/nvim/lua/custom
 ```
+**Note:** Learn [How to customize](https://nvchad.github.io/config/Custom%20config)
+
 **File Structure:**
 ```sh
 .
@@ -148,7 +150,6 @@ nvim ~/.config/nvim/lua/custom
     :Telescope keymaps
     ```
    
-## Learn
     
 # Uninstall
 
