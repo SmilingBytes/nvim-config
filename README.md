@@ -29,7 +29,7 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 ```
 3. Setup Custom Config:
 ```
-git clone https://github.com/ismail-h-rana/nvim_config.git ~/.config/nvim/lua/custom --depth 1
+git clone https://github.com/ismail-h-rana/nvim-config.git ~/.config/nvim/lua/custom --depth 1
 cd ~/.config/nvim/lua/custom
 nvim +PackerSync
 ```
