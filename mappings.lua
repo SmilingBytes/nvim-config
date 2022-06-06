@@ -56,6 +56,12 @@ M.telescope = {
   },
 }
 
+M.tagbar = {
+  n = {
+    ["t"] = { "<cmd> TagbarToggle <CR>", "   Tagbar" },
+  },
+}
+
 M.hop = {
   n = {
     ["s"] = { "<cmd> lua require'hop'.hint_words() <CR>", "   Go There" },

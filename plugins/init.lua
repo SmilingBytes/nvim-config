@@ -24,6 +24,7 @@ return {
 
   ["nvim-lualine/lualine.nvim"] = {},
   ["andymass/vim-matchup"] = {},
+  ["preservim/tagbar"] = {},
   ['nvim-telescope/telescope-fzf-native.nvim'] = {},
   ['phaazon/hop.nvim'] = {},
   ['mg979/vim-visual-multi'] = {},
