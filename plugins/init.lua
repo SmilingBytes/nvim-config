@@ -23,7 +23,7 @@ return {
   },
 
   ["nvim-lualine/lualine.nvim"] = {},
-  -- ["folke/which-key.nvim"] = {},
+  ["andymass/vim-matchup"] = {},
   ['nvim-telescope/telescope-fzf-native.nvim'] = {},
   ['phaazon/hop.nvim'] = {},
   ['mg979/vim-visual-multi'] = {},
