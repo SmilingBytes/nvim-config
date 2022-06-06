@@ -39,6 +39,7 @@ M.lazygit = {
     ["<leader>gg"] = { "<cmd> LazyGit <CR>", "   LazyGit"}
   }
 }
+
 M.telescope = {
   n = {
     ["<leader>f"] = { "<cmd> Telescope live_grep <CR>", "   Find" },
@@ -56,9 +57,9 @@ M.telescope = {
   },
 }
 
-M.tagbar = {
+M.symbolsoutline = {
   n = {
-    ["t"] = { "<cmd> TagbarToggle <CR>", "   Tagbar" },
+    ["<leader>o"] = { "<cmd> SymbolsOutline <CR>", "   Symbols Outline" },
   },
 }
 

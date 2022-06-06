@@ -1,5 +1,6 @@
 -- user plugin configs!
 require "custom.plugins.hop"
+require "custom.plugins.symbols-outline"
 
 
 -- user plugin init
@@ -24,7 +25,7 @@ return {
 
   ["nvim-lualine/lualine.nvim"] = {},
   ["andymass/vim-matchup"] = {},
-  ["preservim/tagbar"] = {},
+  ["simrat39/symbols-outline.nvim"] = {},
   ['nvim-telescope/telescope-fzf-native.nvim'] = {},
   ['phaazon/hop.nvim'] = {},
   ['mg979/vim-visual-multi'] = {},
