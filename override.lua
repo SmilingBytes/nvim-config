@@ -50,12 +50,29 @@ M.statusline = {
 }
 
 M.telescope = {
+
   extensions = {
-    -- fd is needed
-    media_files = {
-      filetypes = { "png", "webp", "jpg", "jpeg" },
+    fzf = {
+      fuzzy = true,                    -- false will only do exact matching
+      override_generic_sorter = true,  -- override the generic sorter
+      override_file_sorter = true,     -- override the file sorter
+      case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+                                       -- the default case_mode is "smart_case"
+    },
+    project = {
+      base_dirs = {
+        '~/odoo/custom_addons',
+        {'~/odoo/custom_addons/mir_erp_11'},
+        {'~/odoo/custom_addons/mis', max_depth = 4},
+        {path = '~/odoo/custom_addons/mir'},
+        {path = '~/odoo/odoo15/addons', max_depth = 2},
+      },
+      hidden_files = true, -- default: false
+      theme = "dropdown",
     },
   },
+  extensions_list = { "themes", "terms", "fzf", "project", "lazygit" },
+
 }
 
 M.whichkey = {
