@@ -84,9 +84,17 @@ Installing **LSP** for your language
 
   - Open nvim and just enter
     ```
-    :LspInstall
+    :LspInstallInfo
     ```
     followed by `<TAB>` to see your options
+    
+    Move your cursor to LSP name, then press 
+    
+    `i` to `install/add` language server, 
+    
+    `X` to `remove` language server,
+    
+    `U` to `update` all (added) language server
 
 Note: I recommend installing `lua` for autocomplete in custom configuration.
 
