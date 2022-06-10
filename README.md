@@ -6,6 +6,7 @@ Try Out My NeoVim Config
 mv ~/.config/nvim ~/.config/nvim.backup
 ```
 
+
 ## Pre-requisites:
 - Neovim 0.7.0 [Install NeoVim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 - If neovim's very old for your OS then consider trying this [neovim version manager](https://github.com/MordechaiHadad/bob)
@@ -98,13 +99,41 @@ Installing **LSP** for your language
 
 Note: I recommend installing `lua` for autocomplete in custom configuration.
 
+<br/>
+
+**Mappings**
+
+  - Checkout Keymaps:
+    ```
+    :Telescope keymaps
+    ```
+    
+    **Note:** Press `<Space>` key to trigger `WhichKey`
+    
+<br/>
 
 # Customization
+
+<br/>
+
+**Themes**
+
+  - To change default theme: 
+    ```sh
+    <leader> + th
+    ```
+    `<leader>` is `<space>` in our config
+<br/><br>
+    
+**Edit / Modify Configuration**
+
 ```sh
 cd ~/.config/nvim/lua/custom
 nvim ~/.config/nvim/lua/custom
 ```
 **Note:** Learn [How to customize](https://nvchad.github.io/config/Custom%20config)
+
+<br/>
 
 **File Structure:**
 ```sh
@@ -160,22 +189,7 @@ nvim ~/.config/nvim/lua/custom
 └── plugin
     └── packer_compiled.lua
 ```
-
-## Themes
-
-  - To change default theme: 
-    ```sh
-    <leader> + th
-    ```
-    `<leader>` is `<space>` in our config
-
-## Mappings
-
-  - Custom Keymappings:
-    ```
-    :Telescope keymaps
-    ```
-
+<br/>
 
 # Update
 
@@ -187,6 +201,7 @@ cd ~/.config/nvim/lua/custom
 git pull
 nvim +PackerSync
 ```
+
 
 **Update Only Plugins:**
 ```sh
