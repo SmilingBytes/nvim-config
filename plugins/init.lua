@@ -31,4 +31,5 @@ return {
   ["kdheepak/lazygit.nvim"] = {},
   ['phaazon/hop.nvim'] = {},
   ['mg979/vim-visual-multi'] = {},
+  ["github/copilot.vim"] = {},
 }

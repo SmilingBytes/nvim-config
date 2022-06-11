@@ -34,9 +34,14 @@ M.nvimtree = {
   },
 }
 
-M.lazygit = {
+M.git = {
   n = {
-    ["<leader>gg"] = { "<cmd> LazyGit <CR>", "   LazyGit"}
+    ["<leader>g"] = { "<cmd> Gitsigns show <CR>", "   Git"},
+    ["<leader>gg"] = { "<cmd> LazyGit <CR>", "  LazyGit"},
+    ["<leader>gb"] = { "<cmd> Gitsigns toggle_current_line_blame <CR>", "  Git Toggle Line Blame"},
+    ["<leader>gB"] = { "<cmd> Gitsigns blame_line <CR>", "  Git Blame (Full)"},
+    ["<leader>gd"] = { "<cmd> Gitsigns diffthis <CR>", "  Git Diff"},
+    ["<leader>gx"] = { "<cmd> Gitsigns toggle_deleted <CR>", "  Git Toggle Deleted"},
   }
 }
 
