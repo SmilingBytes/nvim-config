@@ -1,5 +1,8 @@
 # NeoVim Config
-Try Out My NeoVim Config
+
+Try out my NeoVim config to turrn your NeoVim into a powerful and beautiful IDE
+
+<br/>
 
 **IMPORTANT:**  *Please take a backup (if any)*
 ```sh
