@@ -135,63 +135,6 @@ cd ~/.config/nvim/lua/custom
 nvim ~/.config/nvim/lua/custom
 ```
 **Note:** Learn [How to customize](https://nvchad.github.io/config/Custom%20config)
-
-<br/>
-
-**File Structure:**
-```sh
-.
-├── examples
-│   ├── chadrc.lua
-│   └── init.lua
-├── init.lua
-├── LICENSE
-├── lua
-│   ├── core
-│   │   ├── default_config.lua
-│   │   ├── init.lua
-│   │   ├── mappings.lua
-│   │   ├── options.lua
-│   │   ├── packer.lua
-│   │   └── utils.lua
-│   ├── custom
-│   │   ├── autocmds.lua
-│   │   ├── chadrc.lua
-│   │   ├── init.lua
-│   │   ├── init.vim
-│   │   ├── LICENSE
-│   │   ├── mappings.lua
-│   │   ├── options.lua
-│   │   ├── override.lua
-│   │   ├── plugins
-│   │   │   ├── hop.lua
-│   │   │   ├── init.lua
-│   │   │   ├── lspconfig.lua
-│   │   │   ├── null-ls.lua
-│   │   │   └── whichkey.lua
-│   │   └── README.md
-│   ├── plugins
-│   │   ├── configs
-│   │   │   ├── alpha.lua
-│   │   │   ├── bufferline.lua
-│   │   │   ├── cmp.lua
-│   │   │   ├── gps.lua
-│   │   │   ├── icons.lua
-│   │   │   ├── lsp_installer.lua
-│   │   │   ├── lspconfig.lua
-│   │   │   ├── lspkind_icons.lua
-│   │   │   ├── nvimtree.lua
-│   │   │   ├── nvterm.lua
-│   │   │   ├── others.lua
-│   │   │   ├── telescope.lua
-│   │   │   ├── treesitter.lua
-│   │   │   └── whichkey.lua
-│   │   └── init.lua
-│   └── ui
-│       └── statusline.lua
-└── plugin
-    └── packer_compiled.lua
-```
 <br/>
 
 # Update
