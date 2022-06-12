@@ -21,7 +21,7 @@ mv ~/.config/nvim ~/.config/nvim.backup
 # Install
 ## Linux / macos (UNIX)
 
-1. Uninstall previous configurations
+1. Uninstall previous configurations (if any)
 ```sh
 rm -rf ~/.config/nvim
 rm -rf ~/.local/share/nvim
