@@ -18,11 +18,11 @@ M.treesitter = {
 }
 
 M.nvimtree = {
-  git = {
-    enable = true,
-  },
   view = {
     width = 30,
+  },
+  git = {
+    enable = true,
   },
 }
 

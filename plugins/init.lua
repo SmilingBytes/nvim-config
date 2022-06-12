@@ -23,7 +23,7 @@ return {
     end,
   },
 
-  ["nvim-lualine/lualine.nvim"] = {},
+  -- ["nvim-lualine/lualine.nvim"] = {},
   ["andymass/vim-matchup"] = {},
   ["simrat39/symbols-outline.nvim"] = {},
   ['nvim-telescope/telescope-fzf-native.nvim'] = {},
