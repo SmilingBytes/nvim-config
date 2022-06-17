@@ -5,15 +5,19 @@ M.disabled = {
   n = {
     ["<leader>e"] = "",
     ["<leader>D"] = "",
-    ["<leader>w"] = "",
+    ["<leader>wa"] = "",
+    ["<leader>wk"] = "",
+    ["<leader>wK"] = "",
+    ["<leader>wl"] = "",
+    ["<leader>wr"] = "",
     ["<leader>f"] = "",
   }
 }
 
 M.global = {
   n = {
-    ["<leader>w"] = { "<cmd> w! <CR>", "   Save Buffer" },
-    ["<C-q>"] = { "<cmd> q! <CR>", "   Close Buffer without Saving" },
+    ["<leader>w"] = { "<cmd> w! <CR>", "  Save Buffer" },
+    ["<C-q>"] = { "<cmd> q! <CR>", "   Close without Saving" },
     -- Resize with arrows
     ["<C-Up>"] = { "<cmd> resize -2 <CR>", "ﭕ   ^^" },
     ["<C-Down>"] = { "<cmd> resize +2 <CR>", "ﭕ   ~^" },
@@ -38,7 +42,7 @@ M.git = {
   n = {
     ["<leader>g"] = { "<cmd> Gitsigns show <CR>", "   Git"},
     ["<leader>gg"] = { "<cmd> LazyGit <CR>", "  LazyGit"},
-    ["<leader>gb"] = { "<cmd> Gitsigns toggle_current_line_blame <CR>", "  Git Toggle Line Blame"},
+    ["<leader>gb"] = { "<cmd> Gitsigns toggle_current_line_blame <CR>", "  Git Line Blame"},
     ["<leader>gB"] = { "<cmd> Gitsigns blame_line <CR>", "  Git Blame (Full)"},
     ["<leader>gd"] = { "<cmd> Gitsigns diffthis <CR>", "  Git Diff"},
     ["<leader>gx"] = { "<cmd> Gitsigns toggle_deleted <CR>", "  Git Toggle Deleted"},

@@ -24,6 +24,41 @@ M.nvimtree = {
   git = {
     enable = true,
   },
+  renderer = {
+    highlight_git = false,
+    indent_markers = {
+      enable = true,
+    },
+    icons = {
+      show = {
+        git = true,
+      },
+      glyphs = {
+        default = "",
+        symlink = "",
+        folder = {
+          default = "",
+          empty = "",
+          empty_open = "",
+          open = "ﱮ",
+          symlink = "",
+          symlink_open = "",
+          arrow_open = "",
+          arrow_closed = "",
+        },
+        git = {
+          -- icon to use:            ,
+          unstaged = "",
+          staged = "✓",
+          unmerged = "",
+          renamed = "➜",
+          untracked = "★",
+          deleted = "",
+          ignored = "◌",
+        },
+      },
+    },
+  },
 }
 
 M.gitsigns = {
@@ -40,39 +75,37 @@ M.colorizer = {
 
 M.statusline = {
   lsp_status = {
-    provider = ""
+    provider = "",
   },
 
   current_line = {
-    provider = "position"
-  }
-
+    provider = "position",
+  },
 }
 
 M.telescope = {
 
   extensions = {
     fzf = {
-      fuzzy = true,                    -- false will only do exact matching
-      override_generic_sorter = true,  -- override the generic sorter
-      override_file_sorter = true,     -- override the file sorter
-      case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
-                                       -- the default case_mode is "smart_case"
+      fuzzy = true, -- false will only do exact matching
+      override_generic_sorter = true, -- override the generic sorter
+      override_file_sorter = true, -- override the file sorter
+      case_mode = "smart_case", -- or "ignore_case" or "respect_case"
+      -- the default case_mode is "smart_case"
     },
     project = {
       base_dirs = {
-        '~/odoo/custom_addons',
-        {'~/odoo/custom_addons/mir_erp_11'},
-        {'~/odoo/custom_addons/mis', max_depth = 4},
-        {path = '~/odoo/custom_addons/mir'},
-        {path = '~/odoo/odoo15/addons', max_depth = 2},
+        "~/odoo/custom_addons",
+        { "~/odoo/custom_addons/mir_erp_11" },
+        { "~/odoo/custom_addons/mis", max_depth = 4 },
+        { path = "~/odoo/custom_addons/mir" },
+        { path = "~/odoo/odoo15/addons", max_depth = 2 },
       },
       hidden_files = true, -- default: false
       theme = "dropdown",
     },
   },
   extensions_list = { "themes", "terms", "fzf", "project", "lazygit" },
-
 }
 
 M.whichkey = {

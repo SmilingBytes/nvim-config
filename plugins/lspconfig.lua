@@ -10,7 +10,7 @@ M.setup_lsp = function(attach, capabilities)
 
   local servers = { "sumneko_lua", "pyright", "clangd", "cssls", "eslint", "html", "jsonls", "lemminx", "sqlls", "zk" }
   require("nvim-lsp-installer").setup {
-    ensure_installed = servers,
+    -- ensure_installed = servers,
     automatic_installation = true
   }
 

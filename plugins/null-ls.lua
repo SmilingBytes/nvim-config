@@ -34,8 +34,6 @@ local sources = {
   b.completion.luasnip,
   b.completion.tags,
 
-
-
   -- webdev stuff
   b.formatting.deno_fmt,
   b.formatting.prettierd.with { filetypes = { "html", "markdown", "css" } },
@@ -50,7 +48,6 @@ local sources = {
 
   -- cpp
   b.formatting.clang_format,
-
 }
 
 local M = {}
@@ -64,6 +61,12 @@ M.setup = function()
       use_console = "async",
     },
     sources = sources,
+    -- format on save
+    -- on_attach = function(client)
+    --   if client.server_capabilities.document_formatting then
+    --     vim.cmd "autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()"
+    --   end
+    -- end,
   }
 end
 
