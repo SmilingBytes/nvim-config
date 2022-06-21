@@ -34,20 +34,26 @@ return {
   ["simrat39/symbols-outline.nvim"] = {},
 
   -- telescope extensions
-  ['nvim-telescope/telescope-fzf-native.nvim'] = {},
+  ["nvim-telescope/telescope-fzf-native.nvim"] = {},
   ["nvim-telescope/telescope-project.nvim"] = {},
 
   -- add lezygit (git ui) into vim
   ["kdheepak/lazygit.nvim"] = {},
 
   -- find text or line queckly
-  ['phaazon/hop.nvim'] = {},
+  ["phaazon/hop.nvim"] = {},
 
   -- add multi-cusros on C-n (like vscode C-d)
-  ['mg979/vim-visual-multi'] = {},
+  ["mg979/vim-visual-multi"] = {},
 
   -- github copilot for AI auto complete
-  ["github/copilot.vim"] = {},
+  -- ["github/copilot.vim"] = {},
+
+  -- undotree for git like undo branches
+  ["jiaoshijie/undotree"] = {},
+
+  -- Auto linter and fixer
+  ["dense-analysis/ale"] = {},
 
   -- fix vim/nvim cusrorhold issue: -- Needed while issue https://github.com/neovim/neovim/issues/12587 is still open
   ["antoinemadec/FixCursorHold.nvim"] = {},

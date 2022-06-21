@@ -14,6 +14,7 @@ M.disabled = {
     ["<leader>fa"] = "",
     ["<leader>q"] = "",
     ["<leader>gt"] = "",
+    ["<leader>h"] = "",
   }
 }
 
@@ -138,7 +139,11 @@ M.symbolsoutline = {
 M.hop = {
   n = {
     ["s"] = { "<cmd> lua require'hop'.hint_words() <CR>", "   Go There" },
-    [","] = { "<cmd> lua require'hop'.hint_lines() <CR>", "   Go To Line" },
+    [","] = { "<cmd>HopLineStart<CR>", "   Go To Line" },
+    ["<leader>h"] = { "<cmd> lua require'hop'.hint_words() <CR>", "   Hop" },
+    ["<leader>ha"] = { "<cmd>HopAnywhere<CR>", "   Anywhere" },
+    ["<leader>hl"] = { "<cmd>HopLineStart<CR>", "   Line Start" },
+    ["<leader>hw"] = { "<cmd>HopWord<CR>", "   Word" },
   },
 
   v = {
