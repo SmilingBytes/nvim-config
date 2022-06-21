@@ -19,7 +19,7 @@ return {
   --   end,
   -- },
 
-  -- null ls for lsp, diagnostics, code actions, formating etc
+  -- null ls for lsp, diagnostics, code actions, formatting etc
   ["jose-elias-alvarez/null-ls.nvim"] = {
     after = "nvim-lspconfig",
     config = function()
@@ -33,7 +33,7 @@ return {
   -- add tagbar and minimap
   ["simrat39/symbols-outline.nvim"] = {},
 
-  -- telescope extentions
+  -- telescope extensions
   ['nvim-telescope/telescope-fzf-native.nvim'] = {},
   ["nvim-telescope/telescope-project.nvim"] = {},
 
