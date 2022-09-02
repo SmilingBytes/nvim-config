@@ -18,6 +18,12 @@ return {
   --     require("nvim-ts-autotag").setup()
   --   end,
   -- },
+  ["neovim/nvim-lspconfig"] = {
+    config = function()
+      require "plugins.configs.lspconfig"
+      require "custom.plugins.lspconfig"
+    end,
+  },
 
   -- null ls for lsp, diagnostics, code actions, formatting etc
   ["jose-elias-alvarez/null-ls.nvim"] = {
