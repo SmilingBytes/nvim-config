@@ -30,7 +30,7 @@ M.plugins = {
     ["NvChad/nvim-colorizer.lua"] = override.colorizer,
     ["nvim-telescope/telescope.nvim"] = override.telescope,
     ["feline-nvim/feline.nvim"] = override.statusline,
-    ["folke/which-key.nvim"] = override.whichkey,
+    -- ["folke/which-key.nvim"] = override.whichkey,
     -- ["wbthomason/packer.nvim"] = { snapshot = "stable_chad" },
   },
 

@@ -145,6 +145,12 @@ M.symbolsoutline = {
   },
 }
 
+M.undotree = {
+  n = {
+    ["<leader>ut"] = { "<cmd>lua require('undotree').toggle()<cr>", "歷  UndoTree Toggle" },
+  },
+}
+
 M.hop = {
   n = {
     ["s"] = { "<cmd> lua require'hop'.hint_words() <CR>", "   Go There" },

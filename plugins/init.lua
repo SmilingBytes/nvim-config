@@ -1,7 +1,5 @@
 -- user plugin configs!
 require "custom.plugins.hop"
-require "custom.plugins.symbols-outline"
-
 
 -- user plugin init
 return {
@@ -10,14 +8,10 @@ return {
   ["goolord/alpha-nvim"] = {
     disable = true,
   },
+  ["folke/which-key.nvim"] = {
+    disable = false,
+  },
 
-  -- ["windwp/nvim-ts-autotag"] = {
-  --   ft = { "html", "javascriptreact" },
-  --   after = "nvim-treesitter",
-  --   config = function()
-  --     require("nvim-ts-autotag").setup()
-  --   end,
-  -- },
   ["neovim/nvim-lspconfig"] = {
     config = function()
       require "plugins.configs.lspconfig"
@@ -36,9 +30,6 @@ return {
   -- extend % key to find opening/closing brackets, tags
   ["andymass/vim-matchup"] = {},
 
-  -- add tagbar and minimap
-  ["simrat39/symbols-outline.nvim"] = {},
-
   -- telescope extensions
   ["nvim-telescope/telescope-fzf-native.nvim"] = {},
   ["nvim-telescope/telescope-project.nvim"] = {},
@@ -56,7 +47,14 @@ return {
   -- ["github/copilot.vim"] = {},
 
   -- undotree for git like undo branches
-  ["jiaoshijie/undotree"] = {},
+  ["jiaoshijie/undotree"] = {
+    config = function()
+      require('undotree').setup()
+    end,
+    requires = {
+      "nvim-lua/plenary.nvim",
+    },
+  },
 
   -- Auto linter and fixer
   ["dense-analysis/ale"] = {},
