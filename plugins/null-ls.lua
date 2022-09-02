@@ -50,24 +50,14 @@ local sources = {
   b.formatting.clang_format,
 }
 
-local M = {}
 
-M.setup = function()
-  null_ls.setup {
-    debug = true,
-    log = {
-      enable = true,
-      level = "warn",
-      use_console = "async",
-    },
-    sources = sources,
-    -- format on save
-    -- on_attach = function(client)
-    --   if client.server_capabilities.document_formatting then
-    --     vim.cmd "autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()"
-    --   end
-    -- end,
-  }
-end
-
-return M
+null_ls.setup {
+  debug = true,
+  sources = sources,
+  -- format on save
+  -- on_attach = function(client)
+  --   if client.server_capabilities.document_formatting then
+  --     vim.cmd "autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()"
+  --   end
+  -- end,
+}
