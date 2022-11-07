@@ -1,6 +1,6 @@
 -- user plugin configs!
 require "custom.plugins.hop"
-
+require("symbols-outline").setup()
 -- user plugin init
 return {
 
@@ -54,6 +54,13 @@ return {
     requires = {
       "nvim-lua/plenary.nvim",
     },
+  },
+
+  ["simrat39/symbols-outline.nvim"] = {
+    config = function()
+      require("symbols-outline").setup()
+    end,
+
   },
 
   -- Auto linter and fixer
