@@ -1,16 +1,17 @@
-local overrides = require "custom.plugins.overrides"
-
+-- user plugin configs!
 require "custom.plugins.hop"
 require("symbols-outline").setup()
-
+-- user plugin init
 return {
 
-  -- ["goolord/alpha-nvim"] = { disable = false } -- enables dashboard
-
-  -- Override plugin definition options
+  -- disable dashboard
+  ["goolord/alpha-nvim"] = {
+    disable = true,
+  },
   ["folke/which-key.nvim"] = {
     disable = false,
   },
+
   ["neovim/nvim-lspconfig"] = {
     config = function()
       require "plugins.configs.lspconfig"
@@ -18,23 +19,14 @@ return {
     end,
   },
 
-  -- overrde plugin configs
-  ["NvChad/ui"] = {
-    override_options = overrides.nvchad_ui,
-  },
-  ["nvim-treesitter/nvim-treesitter"] = {
-    override_options = overrides.treesitter,
-  },
-
-  ["williamboman/mason.nvim"] = {
-    override_options = overrides.mason,
+  -- null ls for lsp, diagnostics, code actions, formatting etc
+  ["jose-elias-alvarez/null-ls.nvim"] = {
+    after = "nvim-lspconfig",
+    config = function()
+      require "custom.plugins.null-ls"
+    end,
   },
 
-  ["kyazdani42/nvim-tree.lua"] = {
-    override_options = overrides.nvimtree,
-  },
-
-  -- Install a plugin
   -- extend % key to find opening/closing brackets, tags
   ["andymass/vim-matchup"] = {},
 
@@ -76,15 +68,4 @@ return {
 
   -- fix vim/nvim cusrorhold issue: -- Needed while issue https://github.com/neovim/neovim/issues/12587 is still open
   ["antoinemadec/FixCursorHold.nvim"] = {},
-
-  -- code formatting, linting etc
-  ["jose-elias-alvarez/null-ls.nvim"] = {
-    after = "nvim-lspconfig",
-    config = function()
-      require "custom.plugins.null-ls"
-    end,
-  },
-
-  -- remove plugin
-  -- ["hrsh7th/cmp-path"] = false,
 }

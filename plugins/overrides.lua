@@ -1,4 +1,4 @@
--- overriding default plugin configs!
+-- overriding default plugin!
 local M = {}
 
 M.treesitter = {
@@ -17,6 +17,60 @@ M.treesitter = {
   },
 }
 
+M.mason = {
+  ensure_installed = {
+    -- lua stuff
+    "lua-language-server",
+    "stylua",
+
+    -- web dev
+    "lemminx",
+    "css-lsp",
+    "html-lsp",
+    "typescript-language-server",
+    "deno",
+    "emmet-ls",
+    "json-lsp",
+    "jsonlint",
+
+    -- shell
+    "shfmt",
+    "shellcheck",
+    -- others
+    "prettierd",
+    "prettier",
+    "black",
+    "write-good",
+    "isort",
+    "python-lsp-server",
+    "pylint",
+    "flake8",
+    "gitlint",
+    "eslint_d",
+  },
+}
+
+M.nvchad_ui = {
+  statusline = {
+      separator_style = "default", -- default/round/block/arrow
+     -- or
+     -- custom separators
+     -- separator_style = {
+     --    left = " ",
+     --    right = "",
+     --  },
+
+      overriden_modules = nil,
+   },
+
+   -- lazyload it when there are 1+ buffers
+   tabufline = {
+      enabled = true,
+      lazyload = true,
+      overriden_modules = nil,
+   },
+}
+-- git support in nvimtree
 M.nvimtree = {
   view = {
     width = 30,
@@ -70,25 +124,6 @@ M.colorizer = {
     names = true, -- "Name" codes like Blue
     RRGGBBAA = true, -- #RRGGBBAA hex codes
     css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
-  },
-}
-M.mason = {
-  ensure_installed = {
-    -- lua stuff
-    "lua-language-server",
-    "stylua",
-
-    -- web dev
-    "css-lsp",
-    "html-lsp",
-    "typescript-language-server",
-    "deno",
-    "emmet-ls",
-    "json-lsp",
-
-    -- shell
-    "shfmt",
-    "shellcheck",
   },
 }
 

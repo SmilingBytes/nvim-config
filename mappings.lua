@@ -1,8 +1,3 @@
--- MAPPINGS
-local function termcodes(str)
-   return vim.api.nvim_replace_termcodes(str, true, true, true)
-end
-
 local M = {}
 
 M.disabled = {
@@ -24,6 +19,7 @@ M.disabled = {
 
 M.general = {
   n = {
+    [";"] = { ":", "command mode", opts = { nowait = true } },
     ["<leader>w"] = { "<cmd>w!<CR>", "   Save" },
     -- ["<leader>q"] = { "<cmd>q!<CR>", "  Quit" },
     ["<C-q>"] = { "<cmd> q! <CR>", "   Close without Saving" },
@@ -33,37 +29,16 @@ M.general = {
     ["<C-Left>"] = { "<cmd> vertical resize -2 <CR>", "ﭕ   <<" },
     ["<C-Right>"] = { "<cmd> vertical resize +2 <CR>", "ﭕ   >>" },
   },
-
-  v = {
-  },
-
-  t = {
-    ["<C-k>"] = { termcodes "<C-\\><C-N><C-K>", "   escape terminal to upper editor" },
-    ["<C-h>"] = { termcodes "<C-\\><C-N><C-H>", "   escape terminal to left editor" },
-    ["<C-j>"] = { termcodes "<C-\\><C-N><C-J>", "   escape terminal to bottom editor" },
-  },
 }
 
--- Plugin Based Mappings
+-- more keybinds!
 
+-- Plugin Based Mappings
 M.nvimtree = {
   n = {
     ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "   Explorer" },
   },
 }
-
--- M.buffer = {
---   n = {
---     ["<leader>b"] = { "<cmd>BufferLinePick<CR>", "﬘   Buffers" },
---     ["<leader>bf"] = { "<cmd>Telescope buffer<CR>", "   Find" },
---     ["<leader>bj"] = { "<cmd>BufferLinePick<CR>", "﬘   Jump" },
---     ["<leader>bx"] = { "<cmd>BufferLinePickClose<cr>", "   Pick which buffer to close" },
---     ["<leader>bh"] = { "<cmd>BufferLineCloseLeft<cr>", "ﲑ   Close all to the left" },
---     ["<leader>bl"] = { "<cmd>BufferLineCloseRight<cr>", "ﲒ   Close all to the right" },
---     ["<leader>bd"] = { "<cmd>BufferLineSortByDirectory<cr>", "   Sort by directory" },
---     ["<leader>bL"] = { "<cmd>BufferLineSortByExtension<cr>", "了  Sort by language" },
---   },
--- }
 
 M.git = {
   n = {
