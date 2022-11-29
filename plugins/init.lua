@@ -18,6 +18,8 @@ return {
     end,
   },
 
+  -- ['sindrets/diffview.nvim'] = {},
+
   -- overrde plugin configs
   ["NvChad/ui"] = {
     override_options = overrides.nvchad_ui,
