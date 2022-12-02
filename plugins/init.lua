@@ -19,6 +19,7 @@ return {
   },
 
   -- ['sindrets/diffview.nvim'] = {},
+  ['eandrju/cellular-automaton.nvim'] = {},
 
   -- overrde plugin configs
   ["NvChad/ui"] = {

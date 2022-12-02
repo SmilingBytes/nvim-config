@@ -28,6 +28,8 @@ M.general = {
     ["<C-Down>"] = { "<cmd> resize +2 <CR>", "ﭕ   ~^" },
     ["<C-Left>"] = { "<cmd> vertical resize -2 <CR>", "ﭕ   <<" },
     ["<C-Right>"] = { "<cmd> vertical resize +2 <CR>", "ﭕ   >>" },
+    ["<leader>j"] = { "<cmd>CellularAutomaton make_it_rain<CR>", "...   make it rain" },
+    ["<leader>k"] = { "<cmd>CellularAutomaton game_of_life<CR>", "...   game of life" },
   },
 }
 
