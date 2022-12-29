@@ -20,7 +20,7 @@ local sources = {
   b.diagnostics.gitlint,
   b.diagnostics.jsonlint,
   b.diagnostics.write_good,
-  b.diagnostics.pylint,
+  -- b.diagnostics.pylint,
 
   -- Formatting
   b.formatting.black,
