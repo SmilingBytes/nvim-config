@@ -136,7 +136,7 @@ M.statusline = {
     provider = "position",
   },
 }
-
+-- local lga_actions = require("telescope-live-grep-args.actions")
 M.telescope = {
 
   extensions = {
@@ -158,6 +158,16 @@ M.telescope = {
       hidden_files = true, -- default: false
       theme = "dropdown",
     },
+    live_grep_args = {
+      auto_quoting = true, -- enable/disable auto-quoting
+    --   -- define mappings, e.g.
+    --   mappings = { -- extend mappings
+    --     i = {
+    --       ["<C-k>"] = lga_actions.quote_prompt(),
+    --       ["<C-i>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
+    --     },
+    --   },
+    }
   },
   extensions_list = { "themes", "terms", "fzf", "project", "lazygit" },
 }

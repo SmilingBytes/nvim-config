@@ -21,6 +21,16 @@ return {
   -- ['sindrets/diffview.nvim'] = {},
   ['eandrju/cellular-automaton.nvim'] = {},
 
+  ['nvim-telescope/telescope.nvim'] = {
+    requires = {
+      { "nvim-telescope/telescope-live-grep-args.nvim" },
+    },
+    config = function()
+      require("telescope").load_extension("live_grep_args")
+    end
+  },
+
+
   -- overrde plugin configs
   ["NvChad/ui"] = {
     override_options = overrides.nvchad_ui,
