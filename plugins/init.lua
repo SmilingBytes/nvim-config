@@ -43,9 +43,9 @@ return {
     override_options = overrides.mason,
   },
 
-  ["kyazdani42/nvim-tree.lua"] = {
-    override_options = overrides.nvimtree,
-  },
+  -- ["kyazdani42/nvim-tree.lua"] = {
+  --   override_options = overrides.nvimtree,
+  -- },
 
   -- Install a plugin
   -- extend % key to find opening/closing brackets, tags
