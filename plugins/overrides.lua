@@ -75,11 +75,12 @@ M.nvimtree = {
   view = {
     width = 30,
   },
+  git_hl = true,
   git = {
     enable = true,
   },
   renderer = {
-    highlight_git = false,
+    highlight_git = true,
     indent_markers = {
       enable = true,
     },

@@ -12,3 +12,8 @@ local opt = vim.opt
 for k, v in pairs(options) do
   opt[k] = v
 end
+
+vim.g.nvim_tree_show_icons = {
+  git = 1,
+  folders = 1,
+}
