@@ -78,6 +78,15 @@ M.nvimtree = {
   git_hl = true,
   git = {
     enable = true,
+    ignore = true,
+    show_on_dirs = true,
+    show_on_open_dirs = true,
+    timeout = 400,
+  },
+  modified = {
+    enable = true,
+    show_on_dirs = true,
+    show_on_open_dirs = true,
   },
   renderer = {
     highlight_git = true,
@@ -87,10 +96,14 @@ M.nvimtree = {
     icons = {
       show = {
         git = true,
+        file = true,
+        folder_arrow = true,
+        modified = true,
       },
       glyphs = {
         default = "",
         symlink = "",
+        modified = "●",
         folder = {
           default = "",
           empty = "",
