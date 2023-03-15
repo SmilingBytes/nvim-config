@@ -60,7 +60,6 @@ M.nvimtree = {
   view = {
     width = 30,
   },
-  git_hl = true,
   git = {
     enable = true,
     ignore = true,
