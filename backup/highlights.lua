@@ -4,7 +4,6 @@
 
 local M = {}
 
----@type HLTable
 M.override = {
   CursorLine = {
     bg = "black2",
@@ -14,9 +13,9 @@ M.override = {
   },
 }
 
----@type HLTable
 M.add = {
-  NvimTreeOpenedFolderName = { fg = "green", bold = true },
+  NvimTreeOpenedFolderName = { fg = "green", bold = true, italic = true },
+  NvimTreeOpenedFile = { fg = "teal", bold = true, italic = true },
 }
 
 return M
