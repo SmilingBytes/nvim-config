@@ -96,7 +96,7 @@ local plugins = {
   -- Auto linter and fixer
   {
     "dense-analysis/ale",
-    cmd = { "ALEFix" },
+    cmd = { "ALEEnable", "ALEDetail", "ALEInfo", "ALEToggle", "ALELint", "ALEFix", "ALENext", "ALEPrevious", "ALEFixSuggest", "ALEDisable" },
   },
 
   -- telescope extensions

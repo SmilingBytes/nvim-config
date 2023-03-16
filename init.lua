@@ -27,7 +27,7 @@ g.ale_fixers = {
   python = { 'black', 'isort', 'autoimport', 'pycln', 'autoflake', 'add_blank_lines_for_python_control_statements' }
 }
 
-g.ale_fix_on_save = 1
+-- g.ale_fix_on_save = 1
 g.ale_sign_column_always = 1
 g.ale_completion_autoimport = 1
 

@@ -118,6 +118,22 @@ M.lsp = {
   }
 }
 
+M.ale = {
+  n = {
+
+    ["<leader>a"] = { "<cmd> ALEEnable <cr>", "   ALE" },
+    ["<leader>at"] = { "<cmd> ALEToggle <cr>", "   ALE Toggle" },
+    ["<leader>ai"] = { "<cmd> ALEInfo <cr>", "   ALE Info" },
+    ["<leader>al"] = { "<cmd> ALELint <cr>", "   ALE Lint" },
+    ["<leader>af"] = { "<cmd> ALEFix <cr>", "   ALE Fix" },
+    ["<leader>aj"] = { "<cmd> ALENext <cr>", "   ALE Next" },
+    ["<leader>ak"] = { "<cmd> ALEPrevious <cr>", "   ALE Prev" },
+    ["<leader>ax"] = { "<cmd> ALEDisable <cr>", "   ALE Disable" },
+    ["<leader>as"] = { "<cmd> ALEFixSuggest <cr>", "凜  ALE Fix Suggest" },
+    ["<leader>ad"] = { "<cmd> ALEDetail <cr>", "   Details" },
+  }
+}
+
 M.symbolsoutline = {
   n = {
     ["<leader>o"] = { "<cmd> SymbolsOutline <CR>", "識  Symbols Outline" },
