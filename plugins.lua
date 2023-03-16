@@ -49,7 +49,7 @@ local plugins = {
   -- extend % key to find opening/closing brackets, tags
   {
     "andymass/vim-matchup",
-    event = { "BufEnter" },
+    event = { "InsertEnter" },
   },
 
   -- add lezygit (git ui) into vim
@@ -67,13 +67,15 @@ local plugins = {
   -- add multi-cusros on C-n (like vscode C-d)
   {
     "mg979/vim-visual-multi",
-    event = { "BufEnter" },
+    event = { "InsertEnter" },
   },
 
   -- undotree for git like undo branches
   {
     "jiaoshijie/undotree",
-    event = { "BufEnter" },
+    keys = {
+      { "<leader>ut", "<cmd>lua require('undotree').toggle()<cr>", desc = "歷  UndoTree Toggle" },
+    },
     config = function()
       require('undotree').setup()
     end,
@@ -85,25 +87,25 @@ local plugins = {
   -- symbols outline like minimap+
   {
     "simrat39/symbols-outline.nvim",
-    event = { "BufEnter" },
+    cmd = { "SymbolsOutline" },
     config = function()
       require("custom.configs.symbols-outline")
     end,
-
   },
 
   -- Auto linter and fixer
   {
     "dense-analysis/ale",
-    event = { "InsertEnter" },
+    cmd = { "ALEFix" },
   },
 
   -- telescope extensions
   {
     "nvim-telescope/telescope-fzf-native.nvim",
-    event = { "BufEnter" },
+    cmd = { "Telescope" },
   },
 
+  -- text animation game 
   {
     "eandrju/cellular-automaton.nvim",
     cmd = { "CellularAutomaton" },

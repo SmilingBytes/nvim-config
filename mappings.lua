@@ -151,19 +151,6 @@ M.hop = {
 
 }
 
-M.packer = {
-  n = {
-    ["<leader>p"] = { "<cmd> PackerSync <CR>", "   Packer" },
-    ["<leader>ps"] = { "<cmd> PackerSync <CR>", "痢  Sync" },
-    ["<leader>pc"] = { "<cmd> PackerCompile <CR>", "ﰩ   Compile" },
-    ["<leader>pi"] = { "<cmd> PackerInstall <CR>", "   Install" },
-    ["<leader>pu"] = { "<cmd> PackerUpdate <CR>", "   Update" },
-    ["<leader>pS"] = { "<cmd> PackerUpdate <CR>", "   Status" },
-  }
-}
-
-
-
 -- -- Move text up and down
 -- map("n", "<A-j>", "<Esc>:m .+1<CR>==gi")
 -- map("n", "<A-k>", "<Esc>:m .-2<CR>==gi")
