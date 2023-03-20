@@ -102,7 +102,9 @@ local plugins = {
   -- telescope extensions
   {
     "nvim-telescope/telescope-fzf-native.nvim",
-    cmd = { "Telescope" },
+    keys = {
+      { "<leader>s", "<cmd>Telescope live_grep<cr>", desc = "   Live Search" },
+    },
   },
 
   -- text animation game 
