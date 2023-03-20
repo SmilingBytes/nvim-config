@@ -31,13 +31,22 @@ rm -rf ~/.cache/nvim
 ```sh
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 ```
+
 3. Setup Custom Config
 ```sh
+rm -rf ~/.config/nvim/lua/custom
 git clone https://github.com/ismail-h-rana/nvim-config.git ~/.config/nvim/lua/custom --depth 1
-cd ~/.config/nvim/lua/custom
-nvim +PackerSync
+cd ~/.config/nvim/lua/custom && nvim
 ```
 
+**Install/Update LSP & Plugins**
+```sh
+:MasonInstallAll
+```
+```sh
+:Lazy
+```
+Then press <kbd>S</kbd>.
 
 # Post Install
 
@@ -86,19 +95,19 @@ Next we need to install **python support** (node is optional)
 
 Installing **LSP** for your language
 
-  - Open nvim and just enter
+  - Open nvim then run the following command:
     ```
-    :LspInstallInfo
+    :MasonInstallAll
     ```
-    followed by `<TAB>` to see your options
+    followed by <kbd>TAB</kbd> to see your options
     
     Move your cursor to LSP name, then press 
     
-    `i` to `install/add` language server, 
+    <kbd>i</kbd> to `install/add` language server, 
     
-    `X` to `remove` language server,
+    <kbd>X</kbd> to `remove` language server,
     
-    `U` to `update` all (added) language server
+    <kbd>U</kbd> to `update` all (added) language server
 
 Note: I recommend installing `lua` for autocomplete in custom configuration.
 
@@ -111,7 +120,7 @@ Note: I recommend installing `lua` for autocomplete in custom configuration.
     :Telescope keymaps
     ```
     
-    **Note:** Press `<Space>` key to trigger `WhichKey`
+    **Note:** Press </kbd>Space</kbd> key to trigger `WhichKey`
     
 <br/>
 
@@ -125,10 +134,10 @@ Note: I recommend installing `lua` for autocomplete in custom configuration.
     ```sh
     <leader> + th
     ```
-    `<leader>` is `<space>` in our config
+    `<leader>` is <kbd>space</kbd> in our config
 <br/><br>
     
-**Edit / Modify Configuration**
+**Edit Configuration**
 
 ```sh
 cd ~/.config/nvim/lua/custom
@@ -139,21 +148,31 @@ nvim ~/.config/nvim/lua/custom
 
 # Update
 
-**Update All (NvChad + Custom configs + Plugins):**
+**Update NvChad:**
 ```sh
 cd ~/.config/nvim
 git pull
+```
+
+**Update Custom configs:**
+```sh
 cd ~/.config/nvim/lua/custom
 git pull
-nvim +PackerSync
 ```
 
-
-**Update Only Plugins:**
+**Update Plugins:**
 ```sh
-<leader> + pu
+:Lazy
 ```
-**Note:** by default `<leader>` is the `<space>` key
+ Move your cursor to plugin name, then press 
+    
+ <kbd>I</kbd> to Install or add, 
+
+ <kbd>X</kbd> to Clear or remove,
+
+ <kbd>U</kbd> to Update,
+
+ <kbd>S</kbd> to Sync
 
 
 # Uninstall
