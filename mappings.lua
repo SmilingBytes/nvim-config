@@ -150,9 +150,9 @@ M.undotree = {
 
 M.hop = {
   n = {
-    ["s"] = { "<cmd> lua require'hop'.hint_words() <CR>", "   Go There" },
+    ["s"] = { "<cmd>HopWord<CR>", "   Go There" },
     [","] = { "<cmd>HopLineStart<CR>", "   Go To Line" },
-    ["<leader>h"] = { "<cmd> lua require'hop'.hint_words() <CR>", "   Hop" },
+    ["<leader>h"] = { "<cmd>HopWord<CR>", "   Hop" },
     ["<leader>ha"] = { "<cmd>HopAnywhere<CR>", "   Anywhere" },
     ["<leader>hl"] = { "<cmd>HopLineStart<CR>", "   Line Start" },
     ["<leader>hw"] = { "<cmd>HopWord<CR>", "   Word" },

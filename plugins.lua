@@ -67,6 +67,10 @@ local plugins = {
   {
     "phaazon/hop.nvim",
     cmd = { "HopWord", "HopAnywhere", "HopLineStart" },
+    branch = 'v2', -- optional but strongly recommended
+    config = function()
+      require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+    end,
   },
 
   -- add multi-cusros on C-n (like vscode C-d)
