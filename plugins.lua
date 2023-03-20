@@ -113,6 +113,16 @@ local plugins = {
     cmd = { "CellularAutomaton" },
   },
 
+  -- disable snippet
+  {
+    "rafamadriz/friendly-snippets",
+    enabled = false,
+  },
+  {
+    "L3MON4D3/LuaSnip",
+    enabled = false,
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
