@@ -15,6 +15,8 @@ M.disabled = {
     ["<leader>q"] = "",
     ["<leader>gt"] = "",
     ["<leader>h"] = "",
+    ["<leader>pt"] = "",
+    ["<leader>ph"] = "",
   }
 }
 
@@ -29,8 +31,8 @@ M.general = {
     ["<C-Down>"] = { "<cmd> resize +2 <CR>", "ﭕ   ~^" },
     ["<C-Left>"] = { "<cmd> vertical resize -2 <CR>", "ﭕ   <<" },
     ["<C-Right>"] = { "<cmd> vertical resize +2 <CR>", "ﭕ   >>" },
-    ["<leader>j"] = { "<cmd>CellularAutomaton make_it_rain<CR>", "...   make it rain" },
-    ["<leader>k"] = { "<cmd>CellularAutomaton game_of_life<CR>", "...   game of life" },
+    ["<leader>j"] = { "<cmd>CellularAutomaton make_it_rain<CR>", "   make it rain" },
+    ["<leader>k"] = { "<cmd>CellularAutomaton game_of_life<CR>", "   game of life" },
   },
 }
 
@@ -67,8 +69,8 @@ M.git = {
 
 M.telescope = {
   n = {
-    ["<leader>f"] = { "<cmd> Telescope live_grep <CR>", "   Find" },
     ["<leader>s"] = { "<cmd> Telescope live_grep <CR>", "   Live Search" },
+    ["<leader>f"] = { "<cmd> Telescope live_grep <CR>", "   Find" },
     -- ["<leader>s"] = { "<cmd> lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", "   Live Search" },
     ["<leader>ff"] = { "<cmd> Telescope find_files <CR>", "   Find Files" },
     ["<leader>fb"] = { "<cmd>Telescope git_branches<cr>", "   Checkout branch" },

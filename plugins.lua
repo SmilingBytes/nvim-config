@@ -37,6 +37,11 @@ local plugins = {
     "williamboman/mason.nvim",
     opts = overrides.mason,
   },
+  {
+    "lewis6991/gitsigns.nvim",
+    opts = overrides.gitsigns,
+  },
+
   -- Install a plugin
   {
     "max397574/better-escape.nvim",
