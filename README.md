@@ -1,6 +1,6 @@
 # NeoVim Config
 
-Try out my NeoVim config to turrn your NeoVim into a powerful and beautiful IDE
+Try out my NeoVim config to turn your NeoVim into a powerful and beautiful IDE
 
 <br/>
 
@@ -132,7 +132,7 @@ Note: I recommend installing `lua` for autocomplete in custom configuration.
 
   - To change default theme: 
     ```sh
-    <leader> + th
+    <leader> + ft
     ```
     `<leader>` is <kbd>space</kbd> in our config
 <br/><br>

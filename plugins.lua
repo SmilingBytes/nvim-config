@@ -83,7 +83,7 @@ local plugins = {
   {
     "jiaoshijie/undotree",
     keys = {
-      { "<leader>ut", "<cmd>lua require('undotree').toggle()<cr>", desc = "歷  UndoTree Toggle" },
+      { "<leader>u", "<cmd>lua require('undotree').toggle()<cr>", desc = "   UndoTree Toggle" },
     },
     config = function()
       require('undotree').setup()

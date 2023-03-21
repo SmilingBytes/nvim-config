@@ -15,8 +15,15 @@ M.disabled = {
     ["<leader>q"] = "",
     ["<leader>gt"] = "",
     ["<leader>h"] = "",
+    ["<leader>b"] = "",
+    ["<leader>v"] = "",
+    ["<leader>n"] = "",
     ["<leader>pt"] = "",
     ["<leader>ph"] = "",
+    ["<leader>ch"] = "",
+    ["<leader>rn"] = "",
+    ["<leader>th"] = "",
+
   }
 }
 
@@ -31,13 +38,46 @@ M.general = {
     ["<C-Down>"] = { "<cmd> resize +2 <CR>", "ﭕ   ~^" },
     ["<C-Left>"] = { "<cmd> vertical resize -2 <CR>", "ﭕ   <<" },
     ["<C-Right>"] = { "<cmd> vertical resize +2 <CR>", "ﭕ   >>" },
-    ["<leader>j"] = { "<cmd>CellularAutomaton make_it_rain<CR>", "   make it rain" },
-    ["<leader>k"] = { "<cmd>CellularAutomaton game_of_life<CR>", "   game of life" },
+    ["<leader>j"] = { "<cmd>CellularAutomaton make_it_rain<CR>", "   Make it rain" },
+    ["<leader>k"] = { "<cmd>CellularAutomaton game_of_life<CR>", "   Game of life" },
+    ["<leader>c"] = { "<cmd> NvCheatsheet <CR>", "   Cheatsheet" },
+
   },
 }
 
 -- more keybinds!
+M.comment = {
+  plugin = true,
+  -- toggle comment in both modes
+  n = {
+    ["<leader>/"] = {
+      function()
+        require("Comment.api").toggle.linewise.current()
+      end,
+      "   Toggle comment",
+    },
+  },
 
+  v = {
+    ["<leader>/"] = {
+      "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
+      "   Toggle comment",
+    },
+  },
+}
+
+M.tabufline = {
+  plugin = true,
+  n = {
+    -- close buffer + hide terminal buffer
+    ["<leader>x"] = {
+      function()
+        require("nvchad_ui.tabufline").close_buffer()
+      end,
+      "   Close buffer",
+    },
+  },
+}
 -- Plugin Based Mappings
 M.nvimtree = {
   n = {
@@ -71,23 +111,19 @@ M.telescope = {
   n = {
     ["<leader>s"] = { "<cmd> Telescope live_grep <CR>", "   Live Search" },
     ["<leader>f"] = { "<cmd> Telescope live_grep <CR>", "   Find" },
+    ["<leader>fw"] = { "<cmd> Telescope live_grep <CR>", "   Live grep" },
     -- ["<leader>s"] = { "<cmd> lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", "   Live Search" },
     ["<leader>ff"] = { "<cmd> Telescope find_files <CR>", "   Find Files" },
-    ["<leader>fb"] = { "<cmd>Telescope git_branches<cr>", "   Checkout branch" },
+    ["<leader>fb"] = { "<cmd> Telescope buffers <CR>", "   Find buffers" },
     ["<leader>fc"] = { "<cmd>Telescope colorscheme<cr>", "   Colorscheme" },
     ["<leader>fh"] = { "<cmd>Telescope help_tags<cr>", "   Find Help" },
     ["<leader>fM"] = { "<cmd>Telescope man_pages<cr>", "ﲉ   Man Pages" },
-    ["<leader>fr"] = { "<cmd>Telescope oldfiles<cr>", "   Open Recent File" },
+    ["<leader>fo"] = { "<cmd>Telescope oldfiles<cr>", "   Find Oldfiles" },
     ["<leader>fR"] = { "<cmd>Telescope registers<cr>", "   Registers" },
-    ["<leader>ft"] = { "<cmd>Telescope live_grep<cr>", "   Text" },
-    ["<leader>fk"] = { "<cmd>Telescope keymaps<cr>", "   Keymaps" },
+    ["<leader>ft"] = { "<cmd> Telescope themes <CR>", "   Themes" },
+    ["<leader>fk"] = { "<cmd>Telescope keymaps<cr>", "   Keymaps" },
     ["<leader>fC"] = { "<cmd>Telescope commands<cr>", "גּ   Commands" },
-    ["<leader>fz"] = {
-      "<cmd>lua require('telescope.builtin.internal').colorscheme({enable_preview = true})<cr>",
-      "   Colorscheme with Preview",
-    },
 
-    ["<leader>fp"] = { "<cmd> lua require'telescope'.extensions.project.project{} <CR>", "   Find Project" },
     ["<C-f>"] = { "<cmd> lua require'telescope.builtin'.grep_string(require('telescope.themes').get_ivy({ winblend = 10 })) <CR>", "    Find String" },
   },
 
@@ -122,7 +158,6 @@ M.lsp = {
 
 M.ale = {
   n = {
-
     ["<leader>a"] = { "<cmd> ALEEnable <cr>", "   ALE" },
     ["<leader>at"] = { "<cmd> ALEToggle <cr>", "   ALE Toggle" },
     ["<leader>ai"] = { "<cmd> ALEInfo <cr>", "   ALE Info" },
@@ -137,18 +172,21 @@ M.ale = {
 }
 
 M.symbolsoutline = {
+  plugin = true,
   n = {
     ["<leader>o"] = { "<cmd> SymbolsOutline <CR>", "識  Symbols Outline" },
   },
 }
 
 M.undotree = {
+  plugin = true,
   n = {
-    ["<leader>ut"] = { "<cmd>lua require('undotree').toggle()<cr>", "歷  UndoTree Toggle" },
+    ["<leader>u"] = { "<cmd>lua require('undotree').toggle()<cr>", "   UndoTree Toggle" },
   },
 }
 
 M.hop = {
+  plugin = true,
   n = {
     ["s"] = { "<cmd>HopWord<CR>", "   Go There" },
     [","] = { "<cmd>HopLineStart<CR>", "   Go To Line" },
