@@ -111,6 +111,7 @@ local plugins = {
   -- telescope extensions
   {
     "nvim-telescope/telescope-fzf-native.nvim",
+    cmd = { "Telescope" },
     keys = {
       { "<leader>s", "<cmd>Telescope live_grep<cr>", desc = "   Live Search" },
     },
@@ -125,10 +126,6 @@ local plugins = {
   -- disable snippet
   {
     "rafamadriz/friendly-snippets",
-    enabled = false,
-  },
-  {
-    "L3MON4D3/LuaSnip",
     enabled = false,
   },
 
