@@ -123,6 +123,32 @@ local plugins = {
     cmd = { "CellularAutomaton" },
   },
 
+  -- chat gpt / open ai integrations
+  {
+    "jackMort/ChatGPT.nvim",
+    dependencies = {
+      {
+        "MunifTanjim/nui.nvim",
+      },
+    },
+    config = function()
+      require("chatgpt").setup({
+        -- optional configuration
+        keymaps = {
+          submit = "<C-s>",
+          scroll_up = "<C-k>",
+          scroll_down = "<C-j>",
+        },
+      })
+    end,
+    requires = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim",
+    },
+    cmd = { "ChatGPT", "ChatGPTEditWithInstructions", "ChatGPTActAs" },
+  },
+
   -- disable snippet
   {
     "rafamadriz/friendly-snippets",
