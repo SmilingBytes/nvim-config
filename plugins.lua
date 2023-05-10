@@ -123,32 +123,53 @@ local plugins = {
     cmd = { "CellularAutomaton" },
   },
 
-  -- chat gpt / open ai integrations
+  -- AI assisted code with codeium
   {
-    "jackMort/ChatGPT.nvim",
-    dependencies = {
-      {
-        "MunifTanjim/nui.nvim",
-      },
-    },
-    config = function()
-      require("chatgpt").setup({
-        -- optional configuration
-        keymaps = {
-          submit = "<C-s>",
-          scroll_up = "<C-k>",
-          scroll_down = "<C-j>",
-        },
-      })
-    end,
-    requires = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim",
-    },
-    cmd = { "ChatGPT", "ChatGPTEditWithInstructions", "ChatGPTActAs" },
+    "Exafunction/codeium.vim",
+    event = { "InsertEnter" },
+    config = function ()
+      -- Change '<C-g>' here to any keycode you like.
+      vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true })
+      vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
+    end
   },
-
+  -- chat gpt / open ai integrations
+  -- {
+  --   "jackMort/ChatGPT.nvim",
+  --   dependencies = {
+  --     {
+  --       "MunifTanjim/nui.nvim",
+  --     },
+  --   },
+  --   config = function()
+  --     require("chatgpt").setup({
+  --       popup_input = {
+  --         prompt = "  ",
+  --         border = {
+  --           highlight = "FloatBorder",
+  --           style = "rounded",
+  --           text = {
+  --             top_align = "center",
+  --             top = " Prompt ",
+  --           },
+  --         },
+  --         win_options = {
+  --           winhighlight = "Normal:Normal,FloatBorder:FloatBorder",
+  --         },
+  --         submit = "<C-Enter>",
+  --         submit_n = "<Enter>",
+  --       },
+  --     })
+  --   end,
+  --   requires = {
+  --     "MunifTanjim/nui.nvim",
+  --     "nvim-lua/plenary.nvim",
+  --     "nvim-telescope/telescope.nvim",
+  --   },
+  --   cmd = { "ChatGPT", "ChatGPTEditWithInstructions", "ChatGPTActAs" },
+  -- },
+  --
+  --
   -- disable snippet
   {
     "rafamadriz/friendly-snippets",

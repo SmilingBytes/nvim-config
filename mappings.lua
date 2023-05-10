@@ -48,7 +48,7 @@ M.general = {
     ["<C-Right>"] = { "<cmd> vertical resize +2 <CR>", "ﭕ   >>" },
     ["<leader>j"] = { "<cmd>CellularAutomaton make_it_rain<CR>", "   Make it rain" },
     ["<leader>k"] = { "<cmd>CellularAutomaton game_of_life<CR>", "   Game of life" },
-    ["<leader>z"] = { "<cmd> NvCheatsheet <CR>", "   Cheatsheet" },
+    ["<leader>c"] = { "<cmd> NvCheatsheet <CR>", "   Cheatsheet" },
 
   },
 }
@@ -179,24 +179,24 @@ M.ale = {
   }
 }
 
-M.chatgpt = {
-  n = {
-    ["<leader>c"] = { "<cmd>ChatGPT<CR>", "   ChatGPT" },
-    ["<leader>cg"] = { "<cmd>ChatGPT<CR>", "   ChatGPT" },
-    ["<leader>cc"] = { "<cmd>ChatGPTEditWithInstructions<CR>", "   ChatGPT Code" },
-    ["<leader>ca"] = { "<cmd>ChatGPTActAs<CR>", "   ChatGPT Act As" },
-  },
-
-  v = {
-    ["z"] = { "<ESC>:ChatGPTEditWithInstructions<CR>", "   ChatGPT" },
-  },
-
-  i = {
-    ["<C-c>"] = { "<ESC>:ChatGPT<CR>", "   ChatGPT" },
-    ["<A-c>"] = { "<ESC>:ChatGPTEditWithInstructions<CR>", "   ChatGPT Code" },
-  }
-}
-
+-- M.chatgpt = {
+--   n = {
+--     ["<leader>c"] = { "<cmd>ChatGPT<CR>", "   ChatGPT" },
+--     ["<leader>cg"] = { "<cmd>ChatGPT<CR>", "   ChatGPT" },
+--     ["<leader>cc"] = { "<cmd>ChatGPTEditWithInstructions<CR>", "   ChatGPT Code" },
+--     ["<leader>ca"] = { "<cmd>ChatGPTActAs<CR>", "   ChatGPT Act As" },
+--   },
+--
+--   v = {
+--     ["z"] = { "<ESC>:ChatGPTEditWithInstructions<CR>", "   ChatGPT" },
+--   },
+--
+--   i = {
+--     ["<C-c>"] = { "<ESC>:ChatGPT<CR>", "   ChatGPT" },
+--     ["<A-c>"] = { "<ESC>:ChatGPTEditWithInstructions<CR>", "   ChatGPT Code" },
+--   }
+-- }
+--
 M.symbolsoutline = {
   n = {
     ["<leader>o"] = { "<cmd> SymbolsOutline <CR>", "識  Symbols Outline" },
