@@ -41,6 +41,9 @@ M.general = {
     ["<leader>w"] = { "<cmd>w!<CR>", "   Save" },
     -- ["<leader>q"] = { "<cmd>q!<CR>", "  Quit" },
     ["<C-q>"] = { "<cmd> q! <CR>", "   Close without Saving" },
+
+    ["<C-j>"] = { ":m .+1<CR>==", "ﭕ   Move Down" },
+    ["<C-k>"] = { ":m .-2<CR>==", "ﭕ   Move Up" },
     -- Resize with arrows
     ["<C-Up>"] = { "<cmd> resize -2 <CR>", "ﭕ   ^^" },
     ["<C-Down>"] = { "<cmd> resize +2 <CR>", "ﭕ   ~^" },
@@ -50,6 +53,10 @@ M.general = {
     ["<leader>k"] = { "<cmd>CellularAutomaton game_of_life<CR>", "   Game of life" },
     ["<leader>c"] = { "<cmd> NvCheatsheet <CR>", "   Cheatsheet" },
 
+  },
+  v = {
+    ["<C-j>"] = { ":m '>+1<CR>gv=gv", "ﭕ   Move Down" },
+    ["<C-k>"] = { ":m '<-2<CR>gv=gv", "ﭕ   Move Up" },
   },
 }
 
@@ -118,65 +125,65 @@ M.git = {
 M.telescope = {
   n = {
     ["<leader>s"] = { "<cmd> Telescope live_grep <CR>", "   Live Search" },
-    ["<leader>f"] = { "<cmd> Telescope live_grep <CR>", "   Find" },
-    ["<leader>fw"] = { "<cmd> Telescope live_grep <CR>", "   Live grep" },
-    -- ["<leader>s"] = { "<cmd> lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", "   Live Search" },
-    ["<leader>ff"] = { "<cmd> Telescope find_files <CR>", "   Find Files" },
-    ["<leader>fb"] = { "<cmd> Telescope buffers <CR>", "   Find buffers" },
-    ["<leader>fc"] = { "<cmd>Telescope colorscheme<cr>", "   Colorscheme" },
-    ["<leader>fh"] = { "<cmd>Telescope help_tags<cr>", "   Find Help" },
-    ["<leader>fM"] = { "<cmd>Telescope man_pages<cr>", "ﲉ   Man Pages" },
-    ["<leader>fo"] = { "<cmd>Telescope oldfiles<cr>", "   Find Oldfiles" },
-    ["<leader>fR"] = { "<cmd>Telescope registers<cr>", "   Registers" },
-    ["<leader>ft"] = { "<cmd> Telescope themes <CR>", "   Themes" },
-    ["<leader>fk"] = { "<cmd>Telescope keymaps<cr>", "   Keymaps" },
-    ["<leader>fC"] = { "<cmd>Telescope commands<cr>", "גּ   Commands" },
+  ["<leader>f"] = { "<cmd> Telescope live_grep <CR>", "   Find" },
+  ["<leader>fw"] = { "<cmd> Telescope live_grep <CR>", "   Live grep" },
+  -- ["<leader>s"] = { "<cmd> lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", "   Live Search" },
+  ["<leader>ff"] = { "<cmd> Telescope find_files <CR>", "   Find Files" },
+  ["<leader>fb"] = { "<cmd> Telescope buffers <CR>", "   Find buffers" },
+  ["<leader>fc"] = { "<cmd>Telescope colorscheme<cr>", "   Colorscheme" },
+  ["<leader>fh"] = { "<cmd>Telescope help_tags<cr>", "   Find Help" },
+  ["<leader>fM"] = { "<cmd>Telescope man_pages<cr>", "ﲉ   Man Pages" },
+  ["<leader>fo"] = { "<cmd>Telescope oldfiles<cr>", "   Find Oldfiles" },
+  ["<leader>fR"] = { "<cmd>Telescope registers<cr>", "   Registers" },
+  ["<leader>ft"] = { "<cmd> Telescope themes <CR>", "   Themes" },
+  ["<leader>fk"] = { "<cmd>Telescope keymaps<cr>", "   Keymaps" },
+  ["<leader>fC"] = { "<cmd>Telescope commands<cr>", "גּ   Commands" },
 
-    ["<C-f>"] = { "<cmd> lua require'telescope.builtin'.grep_string(require('telescope.themes').get_ivy({ winblend = 10 })) <CR>", "    Find String" },
-  },
+  ["<C-f>"] = { "<cmd> lua require'telescope.builtin'.grep_string(require('telescope.themes').get_ivy({ winblend = 10 })) <CR>", "    Find String" },
+},
 
-  v = {
-    ["<C-f>"] = { "<cmd> lua require'telescope.builtin'.grep_string(require('telescope.themes').get_dropdown({ winblend = 10 })) <CR>", "   Find String" },
-  },
+v = {
+  ["<C-f>"] = { "<cmd> lua require'telescope.builtin'.grep_string(require('telescope.themes').get_dropdown({ winblend = 10 })) <CR>", "   Find String" },
+},
 
-  i = {
-    ["<C-f>"] = { "<cmd> lua require'telescope.builtin'.grep_string(require('telescope.themes').get_cursor({ winblend = 10 })) <CR>", "   Find String" },
-  },
+i = {
+  ["<C-f>"] = { "<cmd> lua require'telescope.builtin'.grep_string(require('telescope.themes').get_cursor({ winblend = 10 })) <CR>", "   Find String" },
+},
 }
 
 M.lsp = {
-  n = {
+n = {
 
-    ["<leader>l"] = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "   LSP" },
-    ["<leader>ld"] = { "<cmd>Telescope diagnostics bufnr=0 theme=get_ivy<cr>", "   Buffer Diagnostics" },
-    ["<leader>lw"] = { "<cmd>Telescope diagnostics<cr>", "   Diagnostics" },
-    ["<leader>lf"] = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "   Format" },
-    ["<leader>li"] = { "<cmd>LspInfo<cr>", "   Info" },
-    ["<leader>lI"] = { "<cmd>LspInstallInfo<cr>", "   Installer Info" },
-    ["<leader>lj"] = { "<cmd>lua vim.diagnostic.goto_next()<cr>", "   Next Diagnostic" },
-    ["<leader>lk"] = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "   Prev Diagnostic" },
-    ["<leader>ll"] = { "<cmd>lua vim.lsp.codelens.run()<cr>", "   CodeLens Action" },
-    ["<leader>lq"] = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "   Quickfix" },
-    ["<leader>lr"] = { "<cmd>lua vim.lsp.buf.rename()<cr>", "凜  Rename" },
-    ["<leader>ls"] = { "<cmd>Telescope lsp_document_symbols<cr>", "   Document Symbols" },
-    ["<leader>lS"] = { "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "歷  Workspace Symbols" },
-    ["<leader>le"] = { "<cmd>Telescope quickfix<cr>", "   Telescope Quickfix" },
-  }
+  ["<leader>l"] = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "   LSP" },
+  ["<leader>ld"] = { "<cmd>Telescope diagnostics bufnr=0 theme=get_ivy<cr>", "   Buffer Diagnostics" },
+  ["<leader>lw"] = { "<cmd>Telescope diagnostics<cr>", "   Diagnostics" },
+  ["<leader>lf"] = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "   Format" },
+  ["<leader>li"] = { "<cmd>LspInfo<cr>", "   Info" },
+  ["<leader>lI"] = { "<cmd>LspInstallInfo<cr>", "   Installer Info" },
+  ["<leader>lj"] = { "<cmd>lua vim.diagnostic.goto_next()<cr>", "   Next Diagnostic" },
+  ["<leader>lk"] = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "   Prev Diagnostic" },
+  ["<leader>ll"] = { "<cmd>lua vim.lsp.codelens.run()<cr>", "   CodeLens Action" },
+  ["<leader>lq"] = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "   Quickfix" },
+  ["<leader>lr"] = { "<cmd>lua vim.lsp.buf.rename()<cr>", "凜  Rename" },
+  ["<leader>ls"] = { "<cmd>Telescope lsp_document_symbols<cr>", "   Document Symbols" },
+  ["<leader>lS"] = { "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "歷  Workspace Symbols" },
+  ["<leader>le"] = { "<cmd>Telescope quickfix<cr>", "   Telescope Quickfix" },
+}
 }
 
 M.ale = {
-  n = {
-    ["<leader>a"] = { "<cmd> ALEEnable <cr>", "   ALE" },
-    ["<leader>at"] = { "<cmd> ALEToggle <cr>", "   ALE Toggle" },
-    ["<leader>ai"] = { "<cmd> ALEInfo <cr>", "   ALE Info" },
-    ["<leader>al"] = { "<cmd> ALELint <cr>", "   ALE Lint" },
-    ["<leader>af"] = { "<cmd> ALEFix <cr>", "   ALE Fix" },
-    ["<leader>aj"] = { "<cmd> ALENext <cr>", "   ALE Next" },
-    ["<leader>ak"] = { "<cmd> ALEPrevious <cr>", "   ALE Prev" },
-    ["<leader>ax"] = { "<cmd> ALEDisable <cr>", "   ALE Disable" },
-    ["<leader>as"] = { "<cmd> ALEFixSuggest <cr>", "凜  ALE Fix Suggest" },
-    ["<leader>ad"] = { "<cmd> ALEDetail <cr>", "   Details" },
-  }
+n = {
+  ["<leader>a"] = { "<cmd> ALEEnable <cr>", "   ALE" },
+  ["<leader>at"] = { "<cmd> ALEToggle <cr>", "   ALE Toggle" },
+  ["<leader>ai"] = { "<cmd> ALEInfo <cr>", "   ALE Info" },
+  ["<leader>al"] = { "<cmd> ALELint <cr>", "   ALE Lint" },
+  ["<leader>af"] = { "<cmd> ALEFix <cr>", "   ALE Fix" },
+  ["<leader>aj"] = { "<cmd> ALENext <cr>", "   ALE Next" },
+  ["<leader>ak"] = { "<cmd> ALEPrevious <cr>", "   ALE Prev" },
+  ["<leader>ax"] = { "<cmd> ALEDisable <cr>", "   ALE Disable" },
+  ["<leader>as"] = { "<cmd> ALEFixSuggest <cr>", "凜  ALE Fix Suggest" },
+  ["<leader>ad"] = { "<cmd> ALEDetail <cr>", "   Details" },
+}
 }
 
 -- M.chatgpt = {
