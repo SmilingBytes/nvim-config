@@ -11,6 +11,7 @@ require "custom.options"
 -- global config
 local g = vim.g
 
+g.nvim_system_wide = 1 -- install the plugins system-wide.
 g.autosave = true
 g.python_host_prog = '/usr/bin/python3'
 g.python3_host_prog = '/usr/bin/python3'

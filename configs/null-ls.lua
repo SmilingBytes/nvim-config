@@ -8,45 +8,34 @@ local b = null_ls.builtins
 
 local sources = {
   -- Code Actions
-  b.code_actions.eslint_d,
   b.code_actions.gitsigns,
-  b.code_actions.shellcheck,
+
+  -- Completion
+  b.completion.spell,
+  b.completion.tags,
 
   -- Diagnostics
+  b.diagnostics.ruff,
   b.diagnostics.codespell,
+  b.diagnostics.luacheck.with { extra_args = { "--global vim" } },
   b.diagnostics.curlylint,
-  b.diagnostics.eslint_d,
-  b.diagnostics.flake8,
+  b.diagnostics.spectral,
   b.diagnostics.gitlint,
-  b.diagnostics.jsonlint,
+  b.diagnostics.typos,
   b.diagnostics.write_good,
   -- b.diagnostics.pylint,
 
   -- Formatting
-  b.formatting.black,
+  b.formatting.ruff,
   b.formatting.codespell,
-  b.formatting.eslint_d,
-  b.formatting.isort,
-
-  -- Completion
-  b.completion.spell,
-  b.completion.luasnip,
-  b.completion.tags,
-
-  -- webdev stuff
-  b.formatting.deno_fmt,
-  b.formatting.prettierd.with { filetypes = { "html", "markdown", "css" } },
-
-  -- Lua
+  b.formatting.fixjson,
+  b.formatting.yamlfmt,
   b.formatting.stylua,
-  b.diagnostics.luacheck.with { extra_args = { "--global vim" } },
+  b.formatting.blackd,
 
-  -- Shell
-  b.formatting.shfmt,
-  b.diagnostics.shellcheck.with { diagnostics_format = "#{m} [#{c}]" },
+  -- hovers
+  b.hover.dictionary,
 
-  -- cpp
-  b.formatting.clang_format,
 }
 
 null_ls.setup {

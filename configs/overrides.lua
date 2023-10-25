@@ -24,37 +24,32 @@ M.treesitter = {
     enable = true,              -- mandatory, false will disable the whole extension
   },
 }
-
 M.mason = {
   ensure_installed = {
     -- lua stuff
     "lua-language-server",
+
+    -- lsp
+    "pyright",
+    "ruff-lsp",
+    "dockerfile-language-server",
+    "json-lsp",
+
+    -- linter 
+    "codespell",
+    "write-good",
+    "typos",
+    "gitlint",
+
+    "flake8",
+
+    -- formatter
+    "yamlfmt",
     "stylua",
 
-    -- web dev
-    "lemminx",
-    "css-lsp",
-    "html-lsp",
-    "typescript-language-server",
-    "deno",
-    "emmet-ls",
-    "json-lsp",
-    "jsonlint",
-
-    -- shell
-    "shfmt",
-    "shellcheck",
-    -- others
-    "prettierd",
-    "prettier",
     "black",
-    "write-good",
     "isort",
-    "python-lsp-server",
-    "pylint",
-    "flake8",
-    "gitlint",
-    "eslint_d",
+    -- ref: https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
   },
 }
 
