@@ -19,13 +19,12 @@ g.cursorhold_updatetime = 100
 
 -- ALE configurations
 g.ale_linters = {
-  python = { 'flake8', 'bandit', 'mypy', 'pylint', 'pycln' }
+  python = { 'ruff', 'bandit', 'mypy' }
 }
 
 g.ale_fixers = {
   ['*'] = { 'remove_trailing_lines', 'trim_whitespace' },
-  javascript = { 'prettier', 'eslint' },
-  python = { 'black', 'isort', 'autoimport', 'pycln', 'autoflake', 'add_blank_lines_for_python_control_statements' }
+  python = { 'ruff', 'black' }
 }
 
 -- g.ale_fix_on_save = 1

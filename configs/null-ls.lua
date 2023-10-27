@@ -19,7 +19,6 @@ local sources = {
   b.diagnostics.codespell,
   b.diagnostics.luacheck.with { extra_args = { "--global vim" } },
   b.diagnostics.curlylint,
-  b.diagnostics.spectral,
   b.diagnostics.gitlint,
   b.diagnostics.typos,
   b.diagnostics.write_good,
