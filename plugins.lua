@@ -88,8 +88,10 @@ local plugins = {
     config = function()
       require('undotree').setup()
     end,
-    requires = {
-      "nvim-lua/plenary.nvim",
+    dependencies = {
+      {
+        "nvim-lua/plenary.nvim",
+      },
     },
   },
 
@@ -122,7 +124,6 @@ local plugins = {
     "eandrju/cellular-automaton.nvim",
     cmd = { "CellularAutomaton" },
   },
-
   -- AI assisted code with codeium
   {
     "Exafunction/codeium.vim",

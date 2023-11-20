@@ -49,6 +49,8 @@ M.mason = {
 
     "black",
     "isort",
+    "fixjson",
+    "curlylint",
     -- ref: https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
   },
 }

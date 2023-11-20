@@ -16,6 +16,7 @@ g.autosave = true
 g.python_host_prog = '/usr/bin/python3'
 g.python3_host_prog = '/usr/bin/python3'
 g.cursorhold_updatetime = 100
+g.loaded_python3_provider=1
 
 -- ALE configurations
 g.ale_linters = {
