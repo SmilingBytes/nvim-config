@@ -13,8 +13,8 @@ local g = vim.g
 
 g.nvim_system_wide = 1 -- install the plugins system-wide.
 g.autosave = true
-g.python_host_prog = '/usr/bin/python3'
-g.python3_host_prog = '/usr/bin/python3'
+g.python_host_prog = '/usr/bin/python'
+g.python3_host_prog = '/usr/bin/python'
 g.cursorhold_updatetime = 100
 g.loaded_python3_provider=1
 
